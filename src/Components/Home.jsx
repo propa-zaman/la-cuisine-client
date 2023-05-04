@@ -1,10 +1,9 @@
 import React from 'react';
 import Banner from './Banner';
-import ChefCard from './ChefCard';
 import OurChef from './ourChef';
 import Hero from './Hero';
 import Carousal from './Carousal';
-import RecipeLoader from './RecipeLoader';
+
 
 const Home = () => {
     return (

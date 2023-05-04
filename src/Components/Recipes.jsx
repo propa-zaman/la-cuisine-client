@@ -5,19 +5,17 @@ import RecipeCard from './RecipeCard';
 
 const Recipes = () => {
     const chef = useLoaderData();
-    const {id, name, experience, num_recipes, likes, image, description} = chef;
+    const { id, name, experience, num_recipes, likes, image, description } = chef;
     const recipes = chef.recipes;
 
     return (
         <div>
             <div >
                 <div className="w-8/12 mx-auto text-center">
-                    <div className="w-64 h-64 rounded-full overflow-hidden mx-auto my-4">
-                        <img
-                            className="w-full h-full object-cover"
-                            src={image}
-                            alt="chef image"
-                        />
+                    <div className="avatar mt-4">
+                        <div className="w-64 mask mask-squircle">
+                            <img src={image} />
+                        </div>
                     </div>
                     <div className="md:w-10/12 mx-auto mb-10">
                         <h2 className="text-5xl my-9 font-bold">{name}
@@ -31,12 +29,12 @@ const Recipes = () => {
                             {description}
                         </p>
                         <p className="font-semibold mt-4">
-                            I have <span className="font-bold">{num_recipes}</span>{" "}
-                            recipes
+                            Number of recipes: <span className="font-bold">{num_recipes}</span>{" "}
+
                         </p>
                         <p className="font-semibold">
-                            My Experience in this profession is{" "}
-                            <span className="font-bold"> {experience}</span> years
+                            Experience:{" "}
+                            <span className="font-bold"> {experience}</span>
                         </p>
                     </div>
                 </div>
