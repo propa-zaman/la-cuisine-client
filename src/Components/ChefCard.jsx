@@ -30,7 +30,7 @@ const ChefCard = ({chef}) => {
                         </p>
 
                         <div className="card-actions justify-between items-center">
-                            <Link to={`/chefRecipes/${id}`}>
+                            <Link to={`/recipes/${id}`}>
                                 <button className="btn btn-secondary">View Recipes</button>
                             </Link>
 

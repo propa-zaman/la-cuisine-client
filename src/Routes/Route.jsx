@@ -5,6 +5,7 @@ import Login from '../Components/Login';
 import Home from '../Components/Home';
 import Blog from '../Components/Blog';
 import Error from '../Components/Error';
+import Recipes from '../Components/Recipes';
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
                 path: '/login',
                 element: <Login></Login>
             },
+            {
+                path: "/recipes/:id",
+                element: <Recipes></Recipes>,
+                loader: ({params})=>fetch(`https://la-cuisine-server-propa-zaman.vercel.app/chefDetails/${params.id}`)
+              }
         ]
     }
 ])
