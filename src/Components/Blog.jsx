@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Register = () => {
+const Blog = () => {
     return (
         <div className='container mx-auto'>
-            <h2>Register</h2>
+            <h2>Blog</h2>
         </div>
     );
 };
 
-export default Register;
+export default Blog;
