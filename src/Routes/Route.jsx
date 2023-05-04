@@ -6,6 +6,7 @@ import Home from '../Components/Home';
 import Blog from '../Components/Blog';
 import Error from '../Components/Error';
 import Recipes from '../Components/Recipes';
+import PrivateRoute from './PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/recipes/:id",
-                element: <Recipes></Recipes>,
+                element: <PrivateRoute><Recipes></Recipes></PrivateRoute>,
                 loader: ({params})=>fetch(`https://la-cuisine-server-propa-zaman.vercel.app/chefDetails/${params.id}`)
               }
         ]
