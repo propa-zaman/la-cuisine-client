@@ -1,15 +1,21 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
 
 
 
 
 const Header = () => {
-    
 
-        return (
-            <div className='container mx-auto'>
-            
+    const { user, handleSignout } = useContext(AuthContext);
+    const handleLogout = () => {
+        handleSignout();
+    };
+
+
+    return (
+        <div className='container mx-auto'>
+
             <div className="navbar bg-secondary-focus text-secondary-content">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -29,15 +35,35 @@ const Header = () => {
                         <Link to="/blog"><li><a>Blog</a></li></Link>
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn btn-active btn-primary text-secondary-content">Login</a>
+                <div className=" md:mr-10 mr-3 ml-auto">
+                    <>
+                        {user ? (
+                            <>
+                                {user.photoURL && (
+                                    <img title={user.displayName}
+                                        className="h-12 rounded-full border-2 border-primary"
+                                        src={user?.photoURL}
+                                        alt=""
+                                    />
+                                )}
+                                <button onClick={handleLogout} className="ml-5 btn btn-primary">
+                                    Logout
+                                </button>
+                            </>
+                        ) : (
+                            <Link to="/login">
+                                <button className="btn btn-primary">Login</button>
+                            </Link>
+                        )}
+                    </>
                 </div>
+
             </div>
-            
+
         </div>
 
-        );
-    };
-    
+    );
+};
+
 
 export default Header;
