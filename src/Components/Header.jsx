@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { AuthContext } from '../Provider/AuthProvider';
+
 
 
 
@@ -30,7 +30,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn btn-active btn-accent text-secondary-content">Login</a>
+                    <a className="btn btn-active btn-primary text-secondary-content">Login</a>
                 </div>
             </div>
             
