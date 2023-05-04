@@ -3,6 +3,7 @@ import Banner from './Banner';
 import ChefCard from './ChefCard';
 import OurChef from './ourChef';
 import Hero from './Hero';
+import Carousal from './Carousal';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
             <Banner></Banner>
             <OurChef></OurChef>
             <Hero></Hero>
+            <Carousal></Carousal>
         </div>
     );
 };
