@@ -8,24 +8,30 @@ import carousal_6 from '../assets/carousal_6.jpeg';
 
 const Carousal = () => {
     return (
-        <div className="carousel carousel-center rounded-box">
-            <div className="carousel-item">
-                <img src={carousal_1} alt="Pizza" style={{width: '500px', height: '300px'}}/>
-            </div>
-            <div className="carousel-item">
-                <img src={carousal_2} alt="Pizza" style={{width: '500px', height: '300px'}} />
-            </div>
-            <div className="carousel-item">
-                <img src={carousal_3} alt="Pizza" style={{width: '500px', height: '300px'}}/>
-            </div>
-            <div className="carousel-item">
-                <img src={carousal_4} alt="Pizza" style={{width: '500px', height: '300px'}} />
-            </div>
-            <div className="carousel-item">
-                <img src={carousal_5} alt="Pizza" style={{width: '500px', height: '300px'}}/>
-            </div>
-            <div className="carousel-item">
-                <img src={carousal_6} alt="Pizza" style={{width: '500px', height: '300px'}}/>
+        <div>
+            <h2 className="md:text-4xl text-2xl my-10 text-center font-bold text-secondary-focus">
+                Check out some delicious French cuisines
+            </h2>
+            <div className="carousel carousel-center rounded-box ">
+
+                <div className="carousel-item">
+                    <img src={carousal_1} alt="Pizza" style={{ width: '500px', height: '300px' }} />
+                </div>
+                <div className="carousel-item">
+                    <img src={carousal_2} alt="Pizza" style={{ width: '500px', height: '300px' }} />
+                </div>
+                <div className="carousel-item">
+                    <img src={carousal_3} alt="Pizza" style={{ width: '500px', height: '300px' }} />
+                </div>
+                <div className="carousel-item">
+                    <img src={carousal_4} alt="Pizza" style={{ width: '500px', height: '300px' }} />
+                </div>
+                <div className="carousel-item">
+                    <img src={carousal_5} alt="Pizza" style={{ width: '500px', height: '300px' }} />
+                </div>
+                <div className="carousel-item">
+                    <img src={carousal_6} alt="Pizza" style={{ width: '500px', height: '300px' }} />
+                </div>
             </div>
         </div>
     );

@@ -11,7 +11,6 @@ const ChefCard = ({chef}) => {
                 <div className="card w-96 mx-auto bg-base-100 shadow-xl">
                     <figure>
                         <LazyLoad
-                            className="LazyLoad"
                             width={400}
                             height={200}
                             offset={300}
