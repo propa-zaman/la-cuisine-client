@@ -1,10 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Banner from './Banner';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
+
+
 
 const Header = () => {
-    return (
-        <div className='container mx-auto'>
+    
+
+        return (
+            <div className='container mx-auto'>
             
             <div className="navbar bg-secondary-focus text-secondary-content">
                 <div className="navbar-start">
@@ -13,7 +17,7 @@ const Header = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <Link to="/home"><li><a>Home</a></li></Link>
+                            <Link to="/"><li><a>Home</a></li></Link>
                             <Link to="/blog"><li><a>Blog</a></li></Link>
                         </ul>
                     </div>
@@ -21,7 +25,7 @@ const Header = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <Link to="/home"><li><a>Home</a></li></Link>
+                        <Link to="/"><li><a>Home</a></li></Link>
                         <Link to="/blog"><li><a>Blog</a></li></Link>
                     </ul>
                 </div>
@@ -29,9 +33,11 @@ const Header = () => {
                     <a className="btn btn-active btn-accent text-secondary-content">Login</a>
                 </div>
             </div>
-            <Banner></Banner>
+            
         </div>
-    );
-};
+
+        );
+    };
+    
 
 export default Header;
