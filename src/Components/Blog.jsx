@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { FaDownload } from "react-icons/fa";
 import ReactToPdf from "react-to-pdf";
+import useTitle from "../hooks/useTitle";
 
 const Blog = () => {
     const ref = useRef();
@@ -9,6 +10,7 @@ const Blog = () => {
         unit: "in",
         format: [17, 11],
     };
+    useTitle('Blog');
 
     return (
         <div className="container mx-auto mb-16">

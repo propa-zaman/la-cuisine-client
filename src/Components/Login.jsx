@@ -4,11 +4,13 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../Provider/AuthProvider";
+import useTitle from "../hooks/useTitle";
 
 const Login = () => {
   const { user, handleLogin, handleGoogleSignin, handleGithubSignin  } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  useTitle('Login');
 
 
   const navigate = useNavigate();

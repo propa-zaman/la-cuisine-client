@@ -5,12 +5,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import useTitle from "../hooks/useTitle";
 
 const Register = () => {
   const { handleCreateUser, user } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [isChecked, setIsChecked] = useState(false);
+  useTitle('Register');
 
   const navigate = useNavigate();
   const location = useLocation();

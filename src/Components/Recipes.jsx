@@ -2,11 +2,13 @@ import React from 'react';
 import { FaThumbsUp } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
 import RecipeCard from './RecipeCard';
+import useTitle from '../hooks/useTitle';
 
 const Recipes = () => {
     const chef = useLoaderData();
     const { id, name, experience, num_recipes, likes, image, description } = chef;
     const recipes = chef.recipes;
+    useTitle('Recipes');
 
     return (
         <div>
