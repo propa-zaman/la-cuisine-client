@@ -3,6 +3,7 @@
 La Cuisine is a web application designed for food enthusiasts. It includes various features such as user authentication, recipe viewing, and blog posts about various food-related topics. 
 
 ## Live website link: https://la-cuisine-537fb.web.app/
+## Server side repo: https://github.com/propa-zaman/la-cuisine-server
 
 ## Features
 
